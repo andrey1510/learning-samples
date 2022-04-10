@@ -26,7 +26,7 @@ class Teacher extends Staff implements Teaching {
 
     @Override
     public void teach() {
-        
+
     }
 }
 

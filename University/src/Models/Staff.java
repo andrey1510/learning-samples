@@ -4,45 +4,28 @@ import Service.Studying;
 import Service.Teaching;
 
 public class Staff {
+    private long id;
+    private String name;
 
-    long id;
-    String name;
+    //Add Constructor one or two
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 }
 
-class Student extends Staff implements Studying {
-
-    int courseNumber;
-
-    @Override
-    public void study() {
-
-    }
-}
-
-class Teacher extends Staff implements Teaching {
-
-    String subject;
-
-    @Override
-    public void teach() {
-
-    }
-}
-
-class Postgraduate extends Staff implements Studying, Teaching {
-
-    int yearOfStudy;
-    int subject;
-
-    @Override
-    public void study() {
-
-    }
-
-    @Override
-    public void teach() {
-
-    }
-}
 

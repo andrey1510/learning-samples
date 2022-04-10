@@ -1,4 +1,4 @@
-package Implementation;
+package Service;
 
 public interface Teaching {
 

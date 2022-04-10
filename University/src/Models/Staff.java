@@ -1,7 +1,7 @@
 package Models;
 
-import Implementation.Studying;
-import Implementation.Teaching;
+import Service.Studying;
+import Service.Teaching;
 
 public class Staff {
 

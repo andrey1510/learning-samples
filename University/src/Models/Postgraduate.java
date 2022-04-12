@@ -5,16 +5,17 @@ import Service.Teaching;
 
 class Postgraduate extends Staff implements Studying, Teaching {
 
-    int yearOfStudy;
-    int subject;
+    private int yearOfStudy;
+    private int subject;
+
+    public int getYearOfStudy() { return yearOfStudy;  }
+    public void setYearOfStudy(int yearOfStudy) { this.yearOfStudy = yearOfStudy; }
+    public int getSubject() { return subject; }
+    public void setSubject(int subject) { this.subject = subject; }
 
     @Override
-    public void study() {
-        System.out.println("Postgraduate studying");
-    }
+    public void study() { System.out.println("Postgraduate is studying"); }
 
     @Override
-    public void teach() {
-        System.out.println("Postgraduate teaching");
-    }
+    public void teach() { System.out.println("Postgraduate is teaching"); }
 }

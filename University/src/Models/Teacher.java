@@ -3,13 +3,15 @@ package Models;
 import Service.Teaching;
 
 public class Teacher extends Staff implements Teaching {
-//    ToDo - make this field private with getters and setter
-    String subject;
 
+    private String subject;
 
-    //Add Constructor one or two
+    public String getSubject() { return subject; }
+    public void setSubject(String subject) { this.subject = subject; }
+
     @Override
     public void teach() {
-        System.out.println("Teacher teaching");
+        System.out.println("Teacher is teaching");
     }
+
 }

@@ -8,6 +8,15 @@ class Postgraduate extends Staff implements Studying, Teaching {
     private int yearOfStudy;
     private int subject;
 
+    public Postgraduate() {
+    }
+
+    public Postgraduate(long id, String name) {
+        super(id, name);
+    }
+
+    //ToDo - Constructor
+
     public int getYearOfStudy() { return yearOfStudy;  }
     public void setYearOfStudy(int yearOfStudy) { this.yearOfStudy = yearOfStudy; }
     public int getSubject() { return subject; }

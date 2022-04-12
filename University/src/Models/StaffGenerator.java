@@ -3,16 +3,35 @@ package Models;
 import java.util.ArrayList;
 
 
-public class StaffGenerator {
-    public static void main(String[] args) {
+// Utility Class - like functions, no internal state
 
-    ArrayList<String> nameList = new ArrayList<String>();
-    String name1 = new String ("Rikki");
-    String name2 = new String ("Tikki");
-    String name3 = new String ("Tavi");
-    nameList.add(name1);
-    nameList.add(name2);
-    nameList.add(name3);
+public class StaffGenerator {
+    public static ArrayList<Staff> generateStaff(int quantityStaff) {
+
+        ArrayList<Staff> nameList = new ArrayList<>();
+
+//        Staff student = new Student(1, "John");
+//        nameList.add(student);
+
+        for (int i = 0; i < quantityStaff; i++) {
+            int random = (int) (10 * Math.random()); // 0 -10
+            if (random < 6) {
+                //Add Student
+                 nameList.add(new Student(i, "John"));
+            }
+            else if(random <8) {
+                //Add Postgrad
+                 nameList.add(new Postgraduate(i, "Bill"));
+            } else {
+                //Teacher
+                 nameList.add(new Teacher(i, "Baiden"));
+            }
+
+        }
+
+
+        return nameList;
+
 
     }
 

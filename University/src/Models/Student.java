@@ -6,6 +6,13 @@ public class Student extends Staff implements Studying {
 
     private int courseNumber;
 
+    public Student() {
+    }
+
+    public Student(long id, String name) {
+        super(id, name);
+    }
+
     public int getCourseNumber() {
         return courseNumber;
     }

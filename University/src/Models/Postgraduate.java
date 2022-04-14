@@ -3,19 +3,15 @@ package Models;
 import Service.Studying;
 import Service.Teaching;
 
-class Postgraduate extends Staff implements Studying, Teaching {
+public class Postgraduate extends Staff implements Studying, Teaching {
 
     private int yearOfStudy;
     private int subject;
 
-    public Postgraduate() {
-    }
-
+    public Postgraduate() { }
     public Postgraduate(long id, String name) {
         super(id, name);
     }
-
-    //ToDo - Constructor
 
     public int getYearOfStudy() { return yearOfStudy;  }
     public void setYearOfStudy(int yearOfStudy) { this.yearOfStudy = yearOfStudy; }
@@ -27,4 +23,10 @@ class Postgraduate extends Staff implements Studying, Teaching {
 
     @Override
     public void teach() { System.out.println("Postgraduate is teaching"); }
+
+    @Override
+    public String toString() {
+        return String.format("This is postgraduate with id = %s and name = %s", super.getId(), super.getName());
+    }
+
 }

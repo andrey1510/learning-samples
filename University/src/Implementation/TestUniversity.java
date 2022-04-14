@@ -2,6 +2,9 @@ package Implementation;
 
 import Models.Staff;
 import Models.StaffGenerator;
+import Models.Student;
+import Models.Teacher;
+import Models.Postgraduate;
 
 import java.util.ArrayList;
 
@@ -14,15 +17,29 @@ public class TestUniversity {
         ArrayList<Staff> staff = generateStaff(50);
         Staff staff1 = staff.get(0);
 
-        System.out.println("This is Staff object - " + staff1);
+        //System.out.println("This is Staff object - " + staff1);
 
         for (Staff staffToPrint : staff) {
 //            System.out.println(String.format("This is student with id = %s and name = %s", staffToPrint.getId(), staffToPrint.getName()));
             System.out.println(staffToPrint);
         }
 
-        // подсчитать сколько всего студентов, сколько аспирантов, сколько учетелей.
-        //toString() переопределить у всех объектов - студентов, аспирантов, учетелей.
+        int numTeachers = 0;
+        int numStudents = 0;
+        int numPostgraduates = 0;
+
+        for (int i = 0; i <staff.size() ; i++) {
+            if (staff.get(i) instanceof Student) {numStudents++;}
+            else if (staff.get(i) instanceof Teacher) {numTeachers++;}
+            else if (staff.get(i) instanceof Postgraduate) {numPostgraduates++;}
+        }
+        System.out.println("Number of students = " + numStudents);
+        System.out.println("Number of teachers = " + numTeachers);
+        System.out.println("Number of postgraduates = " + numPostgraduates);
+
+
+        // подсчитать сколько всего студентов, сколько аспирантов, сколько учителей. +
+        //toString() переопределить у всех объектов - студентов, аспирантов, учителей. +
 
 //        System.out.println(String.format("This is student with id = %s and name = %s", staff1.getId(), staff1.getName()));
 

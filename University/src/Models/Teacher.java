@@ -6,7 +6,7 @@ public class Teacher extends Staff implements Teaching {
 
     private String subject;
 
-    //ToDo 2 Constructor: default and two argument constructor
+    public Teacher() {}
     public Teacher(long id, String name) {
         super(id, name);
     }
@@ -17,6 +17,11 @@ public class Teacher extends Staff implements Teaching {
     @Override
     public void teach() {
         System.out.println("Teacher is teaching");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("This is teacher with id = %s and name = %s", super.getId(), super.getName());
     }
 
 }

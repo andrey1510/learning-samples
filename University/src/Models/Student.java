@@ -28,4 +28,11 @@ public class Student extends Staff implements Studying {
         return String.format("This is student with id = %s and name = %s", super.getId(), super.getName());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Student that = (Student) obj;
+        return  (super.getId() == super.getId());
+    }
 }

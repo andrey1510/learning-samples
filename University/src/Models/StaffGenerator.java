@@ -28,6 +28,7 @@ public class StaffGenerator {
             }
 
         }
+        nameList.add(new Student(77, "John"));
 
 
         return nameList;

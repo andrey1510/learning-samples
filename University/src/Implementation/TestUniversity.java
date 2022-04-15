@@ -1,10 +1,7 @@
 package Implementation;
 
-import Models.Staff;
-import Models.StaffGenerator;
-import Models.Student;
-import Models.Teacher;
-import Models.Postgraduate;
+//import Models.Staff;
+import Models.*;
 
 import java.util.ArrayList;
 
@@ -28,15 +25,37 @@ public class TestUniversity {
         int numStudents = 0;
         int numPostgraduates = 0;
 
-        for (int i = 0; i <staff.size() ; i++) {
-            if (staff.get(i) instanceof Student) {numStudents++;}
-            else if (staff.get(i) instanceof Teacher) {numTeachers++;}
-            else if (staff.get(i) instanceof Postgraduate) {numPostgraduates++;}
+        int lengthOfArrayList = staff.size();
+
+        Staff firstElement = staff.get(0);
+
+        Staff secondElement = staff.get(2);
+
+//        for (int i = 0; i <staff.size() ; i++) {
+//            Staff element = staff.get(i);
+//
+//            if (element instanceof Student) {numStudents++;}
+//            else if (element instanceof Teacher) {numTeachers++;}
+//            else if (element instanceof Postgraduate) {numPostgraduates++;}
+//        }
+
+        for (Staff element : staff) {
+            if (element instanceof Student) {numStudents++;}
+            else if (element instanceof Teacher) {numTeachers++;}
+            else if (element instanceof Postgraduate) {numPostgraduates++;}
         }
         System.out.println("Number of students = " + numStudents);
         System.out.println("Number of teachers = " + numTeachers);
         System.out.println("Number of postgraduates = " + numPostgraduates);
 
+        Staff studentJohn = staff.get(50); // 77 and John
+        Staff anotherJohn = new Student(77, "John1");
+
+        System.out.println("== " + (studentJohn == anotherJohn));
+        System.out.println("equals " + (studentJohn.equals(anotherJohn)));
+
+        // if( == )
+        // if( equals )
 
         // подсчитать сколько всего студентов, сколько аспирантов, сколько учителей. +
         //toString() переопределить у всех объектов - студентов, аспирантов, учителей. +

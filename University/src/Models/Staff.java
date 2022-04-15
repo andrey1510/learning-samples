@@ -31,7 +31,20 @@ public class Staff {
     public String toString() {
         return String.format("This is staff with id = %s and name = %s", id, name);
     }
-};
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Staff that = (Staff) obj;
+        return  (id == that.id) && (name == that.name);
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Person that = (Person) o;
+//        return firstName.equals(that.firstName) &&
+//                lastName.equals(that.lastName);
+    }
+}
 
 
 

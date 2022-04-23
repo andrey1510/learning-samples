@@ -26,6 +26,7 @@ public class Postgraduate extends Staff implements Studying, Teaching {
 
     @Override
     public String toString() {
+        //Todo - correct toString like Student
         return String.format("This is postgraduate with id = %s and name = %s", super.getId(), super.getName());
     }
 

@@ -14,21 +14,29 @@ public class StaffGenerator {
 //        nameList.add(student);
 
         for (int i = 0; i < quantityStaff; i++) {
-            int random = (int) (10 * Math.random()); // 0 -10
+
+            double randomDouble = 10 * Math.random();
+            int random = (int) randomDouble; // 0 -10
+
             if (random < 6) {
                 //Add Student
-                 nameList.add(new Student(i, "John"));
+                Student student = new Student(i, "John");
+                student.setIq(10 * randomDouble);
+                nameList.add(student);
             }
             else if(random <8) {
                 //Add Postgrad
+                //ToDo - same as student
                  nameList.add(new Postgraduate(i, "Bill"));
             } else {
                 //Teacher
+                //ToDo - same as student
                  nameList.add(new Teacher(i, "Baiden"));
             }
 
         }
         nameList.add(new Student(77, "John"));
+        // ToDo - same as student
 
 
         return nameList;

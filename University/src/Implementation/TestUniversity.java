@@ -63,3 +63,8 @@ public class TestUniversity {
 * Create custom Exception - UniversityLimitException. Use this UniversityLimitException in StaffGenerator.generateStaff()
 * to check if number less than 30
 * */
+
+/*
+* 1. Написать компаратор, и сравнить студентов по IQ
+* 2. Написать еще компаратор и вывести список студентов по Id в убывающем порядке.
+**/

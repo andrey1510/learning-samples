@@ -25,7 +25,8 @@ public class Student extends Staff implements Studying {
 
     @Override
     public String toString() {
-        return String.format("This is student with id = %s and name = %s", super.getId(), super.getName());
+        return String.format("This is student with id = %s, name = %s, iq =%s",
+                super.getId(), super.getName(), super.getIq());
     }
 
     @Override

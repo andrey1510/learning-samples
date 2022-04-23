@@ -4,6 +4,8 @@ public class Staff {
     private long id;
     private String name;
 
+    private double iq;
+
     public Staff() {
         this.id = 0;
         this.name = "Default Student";
@@ -13,7 +15,12 @@ public class Staff {
         this.id = id;
         this.name = name;
     }
-
+    public double getIq() {
+        return iq;
+    }
+    public void setIq(double iq) {
+        this.iq = iq;
+    }
     public long getId() {
         return id;
     }
@@ -29,7 +36,7 @@ public class Staff {
 
     @Override
     public String toString() {
-        return String.format("This is staff with id = %s and name = %s", id, name);
+        return String.format("This is staff with id = %s, name = %s, iq =%s", id, name, iq);
     }
 
     @Override

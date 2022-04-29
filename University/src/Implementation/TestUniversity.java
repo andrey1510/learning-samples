@@ -2,10 +2,8 @@ package Implementation;
 
 //import Models.Staff;
 import Models.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+
+import java.util.*;
 
 import Models.InvalidQuantityException;
 import static Models.StaffGenerator.generateStaff;
@@ -84,18 +82,28 @@ public class TestUniversity {
 //        // write  logic  to enter another  quantity and generateStaff()
 //
 
-            Comparator<Staff> comp1=Comparator.comparing(Staff::getRating);
+            Comparator<Staff> comp1=Comparator.comparing(Staff::getRating); //lambda
             Collections.sort(staff,comp1);
-            System.out.println("Sorting by rating");
+            System.out.println("Sorting by rating acsending");
             for(Staff staffToPrint : staff){
                 System.out.println(staffToPrint);
             }
 
             Collections.sort(staff,comp1.reversed());
-            System.out.println("Sorting by rating");
+            System.out.println("Sorting by rating descending");
             for(Staff staffToPrint : staff){
                 System.out.println(staffToPrint);
             }
+
+            RatingComparator comparator = new RatingComparator();
+            Collections.sort(staff,comparator);
+            System.out.println("Sorting by class comparator");
+            for(Staff staffToPrint : staff){
+                System.out.println(staffToPrint);
+            }
+
+            // There is Staff arraylist. Iterate through list, filter Student and add Student to ArrayList.
+            // As output you should receive ArrayList<Student> -> then print it.
 
 
 

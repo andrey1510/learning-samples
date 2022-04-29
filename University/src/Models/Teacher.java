@@ -21,8 +21,7 @@ public class Teacher extends Staff implements Teaching {
 
     @Override
     public String toString() {
-        //Todo - correct toString like Student
-        return String.format("This is teacher with id = %s and name = %s", super.getId(), super.getName());
+        return String.format("This is teacher with id = %s, name = %s, rating =%s", super.getId(), super.getName(), super.getRating());
     }
 
 }

@@ -4,7 +4,7 @@ public class Staff {
     private long id;
     private String name;
 
-    private double iq;
+    private double rating;
 
     public Staff() {
         this.id = 0;
@@ -15,11 +15,11 @@ public class Staff {
         this.id = id;
         this.name = name;
     }
-    public double getIq() {
-        return iq;
+    public double getRating() {
+        return rating;
     }
-    public void setIq(double iq) {
-        this.iq = iq;
+    public void setRating(double rating) {
+        this.rating = rating;
     }
     public long getId() {
         return id;
@@ -36,7 +36,7 @@ public class Staff {
 
     @Override
     public String toString() {
-        return String.format("This is staff with id = %s, name = %s, iq =%s", id, name, iq);
+        return String.format("This is staff with id = %s, name = %s, rating =%s", id, name, rating);
     }
 
     @Override

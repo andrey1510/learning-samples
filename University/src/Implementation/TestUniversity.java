@@ -24,7 +24,7 @@ public class TestUniversity {
             Scanner sc=new Scanner(System.in);
 
             ArrayList<Staff> staff = null;
-            System.out.println("Please enter quantity of staff.");
+            System.out.println("================== Please enter quantity of staff. ==================");
 
             staff = generateStaff(sc.nextInt());
 
@@ -67,15 +67,16 @@ public class TestUniversity {
                 System.out.println(staffToPrint);
             }
 
+            System.out.println("================== Staff list ==================" );
             System.out.println("Number of students = " + numStudents);
             System.out.println("Number of teachers = " + numTeachers);
             System.out.println("Number of postgraduates = " + numPostgraduates);
 
-            Staff studentJohn = staff.get(staff.size() -1); // 77 and John
-            Staff anotherJohn = new Student(77, "John");
+            //Staff studentJohn = staff.get(staff.size() -1); // 77 and John
+            //Staff anotherJohn = new Student(77, "John");
 
-            System.out.println("== " + (studentJohn == anotherJohn));
-            System.out.println("equals " + (studentJohn.equals(anotherJohn)));
+            //System.out.println("== " + (studentJohn == anotherJohn));
+            //System.out.println("equals " + (studentJohn.equals(anotherJohn)));
 //    } catch (InvalidQuantityException ex) {
 //        System.out.println(ex.getMessage());
 //        System.out.println("Please enter another quantity");
@@ -84,37 +85,53 @@ public class TestUniversity {
 
             Comparator<Staff> comp1=Comparator.comparing(Staff::getRating); //lambda
             Collections.sort(staff,comp1);
-            System.out.println("Sorting by rating acsending");
+            System.out.println("================== Sorting by rating ascending ==================");
             for(Staff staffToPrint : staff){
                 System.out.println(staffToPrint);
             }
 
-            Collections.sort(staff,comp1.reversed());
-            System.out.println("Sorting by rating descending");
+            Comparator<Staff> comp2=Comparator.comparing(Staff::getId); //lambda
+            Collections.sort(staff,comp2.reversed());
+            System.out.println("================== Sorting by ID descending ==================");
             for(Staff staffToPrint : staff){
                 System.out.println(staffToPrint);
             }
 
             RatingComparator comparator = new RatingComparator();
             Collections.sort(staff,comparator);
-            System.out.println("Sorting by class comparator");
+            System.out.println("================== Sorting by class comparator ==================");
             for(Staff staffToPrint : staff){
                 System.out.println(staffToPrint);
             }
 
+            ArrayList <Staff> studentsFilter = new ArrayList<>();
+            System.out.println("================== Students filter ==================");
+            for (Staff element : staff) {
+                    if (element instanceof Student) {
+                        studentsFilter.add(element);
+                    }
+            }
+
+            for (Staff studentToPrint : studentsFilter)    {
+                    System.out.println(studentToPrint);
+                }
+
+
+
+            //System.out.println(studentsFilter);
             // There is Staff arraylist. Iterate through list, filter Student and add Student to ArrayList.
             // As output you should receive ArrayList<Student> -> then print it.
 
 
 
-//    }
+
     } catch (Exception ex) {
         System.out.println(ex.getMessage());
-        System.out.println("Please enter another quantity");
+        System.out.println("================== Please enter another quantity ==================");
         // write  logic  to enter another  quantity and generateStaff()
 
     }
-        System.out.println("Another code");
+        System.out.println("================== Another code ==================");
 
     }
 }

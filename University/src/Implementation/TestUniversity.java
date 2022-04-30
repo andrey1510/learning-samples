@@ -4,6 +4,7 @@ package Implementation;
 import Models.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import Models.InvalidQuantityException;
 import static Models.StaffGenerator.generateStaff;
@@ -104,21 +105,29 @@ public class TestUniversity {
                 System.out.println(staffToPrint);
             }
 
-            ArrayList <Staff> studentsFilter = new ArrayList<>();
-            System.out.println("================== Students filter ==================");
+            ArrayList<Student> studentList = new ArrayList<>();
+            System.out.println("\n================== Students filter ==================");
             for (Staff element : staff) {
                     if (element instanceof Student) {
-                        studentsFilter.add(element);
+                        studentList.add((Student) element); //Staff
                     }
             }
 
-            for (Staff studentToPrint : studentsFilter)    {
+
+            for (Staff studentToPrint : studentList)    {
                     System.out.println(studentToPrint);
-                }
+            }
 
+            System.out.println("\n================== Students filter with lambdas ==================");
 
+            List<Student> collect = staff.stream()
+                    .filter(e -> e instanceof Student)
+                    .map(e -> (Student) e)
+                    .collect(Collectors.toList());
 
-            //System.out.println(studentsFilter);
+            collect.stream().forEach(System.out::println);
+
+            //System.out.println(studentList);
             // There is Staff arraylist. Iterate through list, filter Student and add Student to ArrayList.
             // As output you should receive ArrayList<Student> -> then print it.
 

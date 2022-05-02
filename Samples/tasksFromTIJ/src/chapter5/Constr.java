@@ -27,7 +27,7 @@ public class Constr {
         Constr cnst = new Constr(1);
         cnst.test1();
         cnst.test2();
-
+        System.out.println(cnst);
 
 
     }

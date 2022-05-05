@@ -9,14 +9,13 @@ class Upper {
        return str.toUpperCase(Locale.ENGLISH);
     }
 
-    public static String MakeUpperCaseAlt(String strAlt) {      // Variant 2 (format)
-        return strAlt.format("%S", strAlt);
+    public static String MakeUpperCaseAlt(String str2) {      // Variant 2 (format)
+        return String.format("%S", str2);
     }
 
     public static void main(String[] args) {
-        Upper test = new Upper();
-        System.out.println(test.MakeUpperCase("Test"));         // Variant 1 test (toUpperCase)
-        System.out.println(test.MakeUpperCaseAlt("TestAlt"));   // Variant 2 test (format)
+        System.out.println(MakeUpperCase("Test1"));         // Variant 1 test (toUpperCase)
+        System.out.println(MakeUpperCaseAlt("Test2"));   // Variant 2 test (format)
     }
 }
 

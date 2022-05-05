@@ -1,7 +1,7 @@
 public class EvenOrOdd {
     private static String even_or_odd(int number) {
 
-       // % - остаток от деленияя
+       // % - остаток от деления
         if (number%2 == 0) {
             return "Even";
         } else {

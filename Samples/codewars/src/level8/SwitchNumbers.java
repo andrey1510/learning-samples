@@ -1,4 +1,4 @@
-//https://www.codewars.com/kata/5808dcb8f0ed42ae34000031
+package level8;//https://www.codewars.com/kata/5808dcb8f0ed42ae34000031
 
 public class SwitchNumbers {
 

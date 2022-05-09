@@ -63,10 +63,7 @@ public class TestUniversity {
 //                else if (element instanceof Postgraduate) {numPostgraduates++;}
 //            }
 
-            for (Staff staffToPrint : staff) {
-                //            System.out.println(String.format("This is student with id = %s and name = %s", staffToPrint.getId(), staffToPrint.getName()));
-                System.out.println(staffToPrint);
-            }
+            printStaff(staff);
 
             System.out.println("================== Staff list ==================" );
             System.out.println("Number of students = " + numStudents);
@@ -87,32 +84,29 @@ public class TestUniversity {
             Comparator<Staff> comp1=Comparator.comparing(Staff::getRating); //lambda
             Collections.sort(staff,comp1);
             System.out.println("================== Sorting by rating ascending ==================");
-            for(Staff staffToPrint : staff){
-                System.out.println(staffToPrint);
-            }
+            printStaff(staff);
 
             Comparator<Staff> comp2=Comparator.comparing(Staff::getId); //lambda
             Collections.sort(staff,comp2.reversed());
             System.out.println("================== Sorting by ID descending ==================");
-            for(Staff staffToPrint : staff){
-                System.out.println(staffToPrint);
-            }
+            printStaff(staff);
 
             RatingComparator comparator = new RatingComparator();
             Collections.sort(staff,comparator);
             System.out.println("================== Sorting by class comparator ==================");
-            for(Staff staffToPrint : staff){
-                System.out.println(staffToPrint);
-            }
+            printStaff(staff);
 
             ArrayList<Student> studentList = new ArrayList<>();
-            System.out.println("\n================== Students filter ==================");
-            for (Staff element : staff) {
-                    if (element instanceof Student) {
-                        studentList.add((Student) element); //Staff
-                    }
-            }
+//            System.out.println("\n================== Students filter ==================");
+//            for (Staff element : staff) {
+//                    if (element instanceof Student) {
+//                        studentList.add((Student) element); //Staff
+//                    }
+//            }
 
+            int studentsWithCount = getStudentsWithCount(staff, studentList);
+
+            System.out.println("Найдено студентов - " + studentsWithCount);
 
             for (Staff studentToPrint : studentList)    {
                     System.out.println(studentToPrint);
@@ -127,6 +121,17 @@ public class TestUniversity {
 
             collect.stream().forEach(System.out::println);
 
+            System.out.println("================== Staff after change ==================");
+            printStaff(staff);
+            System.out.println("================== Staff after assignment ==================");
+
+            ArrayList<Staff> new_staff = new ArrayList<>();
+            new_staff.add(new Teacher(100, "Cleaver Teacher"));
+            staff = new_staff;
+            printStaff(staff);
+            //DRY Do not repeat yourself
+
+
             //System.out.println(studentList);
             // There is Staff arraylist. Iterate through list, filter Student and add Student to ArrayList.
             // As output you should receive ArrayList<Student> -> then print it.
@@ -138,10 +143,35 @@ public class TestUniversity {
         System.out.println(ex.getMessage());
         System.out.println("================== Please enter another quantity ==================");
         // write  logic  to enter another  quantity and generateStaff()
+            //ToDo - move up try/catch
 
     }
         System.out.println("================== Another code ==================");
 
+    }
+
+    private static void printStaff(ArrayList<Staff> staff) {
+        for(Staff staffToPrint : staff){
+            System.out.println(staffToPrint);
+        }
+    }
+
+    private static int getStudentsWithCount(ArrayList<Staff> staff, ArrayList<Student> studentList) {
+        System.out.println("\n================== Students filter ==================");
+        for (Staff element : staff) {
+            if (element instanceof Student) {
+                studentList.add((Student) element); //Staff
+            }
+        }
+
+        staff.add(new Teacher(100, "Cleaver Teacher"));
+        Staff staff0 = staff.get(0);
+        staff0.setName(staff0.getName() + "_changed");
+        ArrayList<Staff> new_staff = new ArrayList<>();
+        new_staff.add(new Teacher(100, "Cleaver Teacher"));
+        staff = new_staff;
+
+        return (int) studentList.stream().count();
     }
 }
 

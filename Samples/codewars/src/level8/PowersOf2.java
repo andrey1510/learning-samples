@@ -9,18 +9,15 @@ public class PowersOf2 {
             long [] list  = new long[n+1];
             long m = 2;
             for (int i = 0; i < list.length; i++) {
-
                 if (i == 0) {
                     list[i] = (long) 1;
-                }
-                else {
+                } else {
                     list[i] = (long) m;
                     m=m*2;
                 }
             }
             return list;
-        }
-        else {
+        } else {
             long [] list  = new long[1];
             list[0] = 1;
             return list;

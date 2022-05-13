@@ -1,4 +1,5 @@
-package level8;//https://www.codewars.com/kata/57a5c31ce298a7e6b7000334/train/java
+package level8;
+//https://www.codewars.com/kata/57a5c31ce298a7e6b7000334/train/java
 
 public class BinToDecimal {
     public static int binToDecimal(String inp){

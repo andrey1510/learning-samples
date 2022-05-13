@@ -1,4 +1,4 @@
-
+package level8;
 //https://www.codewars.com/kata/583710ccaa6717322c000105/train/java
 
 public class SimpleMultiplication {

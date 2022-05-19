@@ -19,10 +19,10 @@ class Car {
     public Car() {                  // no-argument constructor
     }
 
-    // Using "this" for constructor chaining within current class
+    // Using "this" to invoke constructor within current class
     String color = "Red";
     public Car(int age, String color) {
-        this(age);          //constructor chaining
+        this(age);          // constructor invoking
         this.color = color;
     }
 
@@ -61,4 +61,3 @@ class Car {
         car4.drive2();
     }
 }
-//ToDo

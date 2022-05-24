@@ -25,24 +25,43 @@ public class Conversions {
 
 }
 
+// Sample of invocation conversion in method
 class Conversions2 {
-
-
-    // Sample of Method invocation conversion
-    long method1(long d) {    //ToDo
-        return 1;
+     int method1(int i) {
+        return i;
     }
     public static void main(String[] args) {
         Conversions2 test1 = new Conversions2();
-        int i = (int) test1.method1((long) 1.453);
-        test1.method1(1l); //implicit and explicit
-// ToDo constructor
+        test1.method1((int)2.453);                //  explicit conversion from double to int as method has int parameter
+        short s = 3;
+        test1.method1(s);                        // implicit conversion from short to int
+    }
+}
 
-        // Sample of Assignment Conversion
+// Sample of invocation conversion in constructor
+class Conversions3 {
+    public Conversions3(int i) {
+    }
+    public static void main(String[] args) {
+        Conversions3 t1 = new Conversions3((int)4.5354f);    // explicit conversion
+        Conversions3 t2 = new Conversions3('a');           // implicit conversion
+    }
+}
+
+
+class Conversions4 {
+    double method2 (double d) {
+        return d;
+    }
+    public static void main(String[] args) {
+        Conversions4 test1 = new Conversions4();
+
+        // Samples of Assignment Conversion
         Character c = 33;       // (in this case implicit narrowing of int -> char -> Character with boxing)
-        System.out.println(c);
+        int i1 = (int) 1.32;     // explicit narrowing
+        int i2 = (int) test1.method2(1.324);   // explicit narrowing
 
-        // Samples of Assignment Conversion in Arithmetic Expressions
+        // Samples of Conversions in operations
 
         byte b1;
         byte b2 = 4;
@@ -51,19 +70,19 @@ class Conversions2 {
         short s1 = 4;
         short s2 = 1;
         s1 = (short) (s1 + s2); /* cast required as s1 and s2 were promoted int during operation
-                    whole operation shall be cast, this    (short) s1 + s2     and this    (short)s1 + (short)s2   will not work
-                    as the operation shall be in int */
+                        whole operation shall be cast, this    (short) s1 + s2     and this    (short)s1 + (short)s2   will not work
+                        as the operation shall be in int */
         s1 += s2;  // equivalent to    s1 = (short) (s1 + s2)      in this case conversion is implicit
 
         double d1 = (double) (1 / 2 + 3 / 2 + 0.1);         // result is 1.1. as 1/2 and 3/2 will be promoted to int
         double d2 =  ((double)1 / (double)2 + (double)3 / (double)2 + 0.1);  // result is 2.1 as 1/2 and 3/2 were cast to double prior to operation
         System.out.println(d1);
         System.out.println(d2);
-        int k = 1;
-        long l = 2;
-        float f1 = 0.5f;
-        long i1 = k / l;
-        float v = i1 + f1;  //ToDo sample with implicit conversion in operation
+
+        int i = 2;
+        float f = 0.5f;
+        float v = i + f;  // implicit conversion in operation
+        System.out.println(v);
     }
 
 }

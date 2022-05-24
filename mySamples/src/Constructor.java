@@ -1,12 +1,15 @@
 
+//////////////     Sample of Constructor      ///////////////
+
 // A Java constructor is special method that is called when an object is instantiated.
 
 public class Constructor {
 
-    // Sample of Constructor
     public Constructor() {}  // Constructor has the same name as class, no return type, no modifiers other than accessibility.
                              // This constructor is No-argument constructor.
 }
+
+//////////////   Sample of implicit declaration of Default Constructor     //////////////
 
 class DefaultConstructor {
     int i;
@@ -19,6 +22,9 @@ class DefaultConstructor {
         System.out.println("Default constructor called: " + obj.i);   // int i was initialized by default constructor with default value.
     }
 }
+
+
+//////////////    Samples of Parametrized, Overloaded, No-argument, Chained constructors    //////////////
 
 class Furniture {
     double weight;
@@ -64,7 +70,7 @@ class Table extends Furniture {
     }
 }
 
-// Test for all constructors except for default constructor
+// Test for all constructors (except for default constructor)
 class TestConstructors {
     public static void main(String[] args) {
 

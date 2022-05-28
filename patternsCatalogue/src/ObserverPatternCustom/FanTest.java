@@ -1,6 +1,6 @@
 package ObserverPatternCustom;
 
-public class FanTest {
+public class FanTest {      // test class
     static int changeTracker = 0;
     public static void main(String[] args) {
         FanSensor fanSensor = new FanSensor();

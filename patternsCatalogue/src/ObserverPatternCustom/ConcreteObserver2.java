@@ -1,9 +1,9 @@
 package ObserverPatternCustom;
 
-public class FanStatApp2 implements FanObserver {  // observer class (i.e. recipient of observation data), it shall implement to observer interface
-    private FanSensor fanSensor;
+public class ConcreteObserver2 implements Observer {  // observer class (i.e. recipient of observation data), it shall implement to observer interface
+    private Subject fanSensor;
     private int trackerSpeed = 0;
-    public FanStatApp2(FanSensor fanSensor) {
+    public ConcreteObserver2(Subject fanSensor) {
         this.fanSensor = fanSensor;
         fanSensor.registerFanObserver(this);
     }

@@ -1,11 +1,11 @@
 package ObserverPatternCustom;
 
-public class FanTest {
+public class TestObserver {
     static int changeTracker = 0;
     public static void main(String[] args) {
-        FanSensor fanSensor = new FanSensor();
-        FanStatApp1 fanStasticsApp1 = new FanStatApp1(fanSensor);
-        FanStatApp2 fanStasticsApp2 = new FanStatApp2(fanSensor);
+        Subject fanSensor = new Subject();
+        ConcreteObserver1 fanStasticsApp1 = new ConcreteObserver1(fanSensor);
+        ConcreteObserver2 fanStasticsApp2 = new ConcreteObserver2(fanSensor);
         //fanSensor.registerFanObserver(fanStasticsApp1);               // todo
         fanSensor.setFanSpeed(3800);            // setting fan speed in FanSensor class
         fanSensor.setFanSpeed(4000);

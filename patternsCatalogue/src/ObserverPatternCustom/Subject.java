@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 // The Observer Pattern defines a one-to-many relationship between a set of objects.
 
-public class FanSensor implements FanObservable {   // subject class, it will provide data to observer. Shall implement observable interface
+public class Subject implements Observable {   // subject class, it will provide data to observer. Shall implement observable interface
     private int fanSpeed;
-    private ArrayList fanAppsList;
+    private ArrayList concreteObserversList;
 
     public void setFanSpeed(int fanSpeed) {
         this.fanSpeed = fanSpeed;
@@ -17,29 +17,29 @@ public class FanSensor implements FanObservable {   // subject class, it will pr
     public int getFanSpeed() {
         return fanSpeed;
     }
-    public FanSensor() {            //ToDo
-        fanAppsList = new ArrayList();
+    public Subject() {            //ToDo
+        concreteObserversList = new ArrayList();
     }
 
     @Override
-    public void registerFanObserver(FanObserver o) {
-        fanAppsList.add(o);
+    public void registerFanObserver(Observer o) {
+        concreteObserversList.add(o);
         System.out.println("New app was registed: " + o.getClass());
     }
 
     @Override
-    public void removeFanObserver(FanObserver o) {
-        int i = fanAppsList.indexOf(o);
+    public void removeFanObserver(Observer o) {
+        int i = concreteObserversList.indexOf(o);
         if (i >= 0) {
-            fanAppsList.remove(i);
+            concreteObserversList.remove(i);
             System.out.println("App was removed: " + o.getClass());
         }
     }
 
     @Override
     public void notifyFanObserver() {
-        for (int i=0; i < fanAppsList.size(); i++) {
-            FanObserver fanObserver = (FanObserver)fanAppsList.get(i);
+        for (int i=0; i < concreteObserversList.size(); i++) {
+            Observer fanObserver = (Observer)concreteObserversList.get(i);
             fanObserver.updateFanStaticsApp(fanSpeed);
         }
     }

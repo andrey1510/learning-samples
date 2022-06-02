@@ -19,13 +19,15 @@ public class SingletonLazyNonThreadSafe {  // Lazy Instantiation - creation of i
     }
 
     // other required fields and methods may be set forth e.g.:
-    public String info = "This is sample of Singleton with non thread safe lazy instantiation";
-
+    private String info = "This is sample of Singleton with non thread safe lazy instantiation";
+    public String getInfo() {
+        return info;
+    }
 }
 
 class SingletonPatternLazyNonThreadSafeTest {
     public static void main(String[] args) {
         SingletonLazyNonThreadSafe singleton = SingletonLazyNonThreadSafe.getInstance(); // accessing method to get sole instance
-        System.out.println(singleton.info);
+        System.out.println(singleton.getInfo());
     }
 }

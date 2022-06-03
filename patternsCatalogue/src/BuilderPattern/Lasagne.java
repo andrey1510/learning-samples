@@ -12,7 +12,6 @@ public class Lasagne {
 
     void assemble() {
         System.out.printf("Adding ingredients for %s:", this.name);
-//todo (String ingredient : ingredients) (ingredient < ingredients)
         for (int i=0; i < ingredients.size(); i++) {
             if (i < ingredients.size()-1) {
                 System.out.print(" " + ingredients.get(i) + ",");

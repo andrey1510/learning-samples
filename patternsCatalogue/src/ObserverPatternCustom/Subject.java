@@ -14,9 +14,6 @@ public class Subject implements Observable {   // subject class, it will provide
         notifyFanObserver(); // ToDo
     }
 
-    public int getFanSpeed() {
-        return fanSpeed;
-    }
     public Subject() {            //ToDo
         concreteObserversList = new ArrayList();
     }

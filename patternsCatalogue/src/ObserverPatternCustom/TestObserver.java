@@ -1,7 +1,6 @@
 package ObserverPatternCustom;
 
 public class TestObserver {
-    static int changeTracker = 0;
     public static void main(String[] args) {
         Subject fanSensor = new Subject();
         ConcreteObserver1 fanStasticsApp1 = new ConcreteObserver1(fanSensor);

@@ -1,6 +1,6 @@
 package FactorySimple;
 
-public class CreatorClass {     // creator class (factory) creates products by referring to product classes
+public class FactoryClass {     // creator class (factory) creates products by referring to product classes
                                 // its function is to determine logic of concrete product choice and create the product instance
 
                             // the code below is moved to this separate class, so Client class will not need to be changed in case of products adding/removal

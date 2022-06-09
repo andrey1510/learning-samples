@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ArrayLists {
+
+    List<Integer> numbers = new ArrayList<> (Arrays.asList(1, 2, 3, 10, 13));
+    List<String> colors1 = new ArrayList<> (Arrays.asList("Orange", "Blue", "Green", "Yellow"));
+    List<String> colors2 = new ArrayList<> (Arrays.asList("Orange", "White", "Yellow", "Cyan"));
+
+    public static void main(String[] args) {
+        ArrayLists t = new ArrayLists();
+
+        // removeIf for array list
+        t.numbers.removeIf(n -> (n < 8));   // removing elements on condition
+
+        // Iterator for array list sample (forEach, lambda)):
+        t.colors1.forEach(System.out::println);
+
+        // Iterator for array list sample (forEach, stream)):
+        t.colors1.stream().forEach((n) -> System.out.println(n));
+
+    }
+
+
+
+}

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
@@ -7,9 +8,9 @@ public class ArrayListSamples {
 
     /////////////////////// Declaring, initializing and filing Array List /////////////////////
 
-    ArrayList<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // import of java.util.Arrays is required
+    List<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // import of java.util.Arrays is required
 
-    ArrayList<String> colors2 = new ArrayList<>(){{  // declaring and initializing array list and adding elements via instance block
+    List<String> colors2 = new ArrayList<>(){{  // declaring and initializing array list and adding elements via instance block
         add("White");           // adding 1 new element to the end of the list
         add(1, "Gray");    // adding 1 new element to the specified position
         add("Black");
@@ -17,9 +18,9 @@ public class ArrayListSamples {
         addAll(0, colors3);        // adding (copying) all elements from another collection to the end of the list
     }};
 
-    ArrayList<String> colors5 = new ArrayList<>(colors3); // declaring array list and initializing it with elements from another collection
+    List<String> colors5 = new ArrayList<>(colors3); // declaring array list and initializing it with elements from another collection
 
-    ArrayList<Integer> numbers = new ArrayList<>();  // in case primitives, argument may be only wrapped
+    List<Integer> numbers = new ArrayList<>();  // in case primitives, argument may be only wrapped
     public void addNumbers() {
         numbers.add(1);
         numbers.add(2);
@@ -32,13 +33,13 @@ public class ArrayListSamples {
         t.addNumbers();
 
 
-        ArrayList<String> colors1 = new ArrayList<>();  // declaring and initializing empty array list
+        List<String> colors1 = new ArrayList<>();  // declaring and initializing empty array list
         colors1.add("Red");       // adding element to the end of the list
         colors1.add("Green");
         colors1.add("Blue");
         colors1.add(0,"Yellow"); // adding 1 new element to the specified position
 
-        ArrayList<String> colors4 = new ArrayList<>(1000);  // array list with initial capacity allocated to it when created; default capacity os 10 elements
+        List<String> colors4 = new ArrayList<>(1000);  // array list with initial capacity allocated to it when created; default capacity os 10 elements
 
     /////////////////////// Removing elements from Array List /////////////////////
 
@@ -76,7 +77,7 @@ public class ArrayListSamples {
 
 class ArrayListIterators {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>(){{
+        List<Integer> numbers = new ArrayList<>(){{
             add(1);
             add(2);
             add(3);

@@ -1,4 +1,9 @@
-abstract public class AbstractClass {
+
+interface SomeInterface {
+
+}
+
+abstract public class AbstractClass implements SomeInterface {
 
 // Abstract class shall be declared with 'abstract' keyword and may have abstract and non-abstract methods. It is not mandatory to have any of them.
 // Abstract class cannot be instantiated
@@ -21,18 +26,6 @@ abstract public class AbstractClass {
 
     public AbstractClass() {    // // Abstract class may have constructor
     }
-
-    public static void main(String[] args) {        //ToDo
-        AbstractClass r = new AbstractClass() {
-            @Override
-            void doSomething() {
-                System.out.println("test?");
-            }
-
-        };
-        r.doSomething();
-    }
-
 
 }
 

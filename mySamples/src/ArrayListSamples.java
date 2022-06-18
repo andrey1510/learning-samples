@@ -1,13 +1,12 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
 
 public class ArrayListSamples {
 
     /////////////////////// Declaring, initializing and filing Array List /////////////////////
 
-    ArrayList<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // import of java.util.Arrays is required
+    List<String> colors0 = Arrays.asList("Violet", "Purple");  // fixed list (its size cannot be changed!) created by factory method; import of java.util.Arrays is required
+
+    ArrayList<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // creating normal list (its size can be changed) by factory method
 
     ArrayList<String> colors2 = new ArrayList<>(){{  // declaring and initializing array list and adding elements via instance block
         add("White");           // adding 1 new element to the end of the list

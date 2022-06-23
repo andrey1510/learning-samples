@@ -6,9 +6,9 @@ public class ArrayListSamples {
 
     List<String> colors0 = Arrays.asList("Violet", "Purple");  // fixed list (its size cannot be changed!) created by factory method; import of java.util.Arrays is required
 
-    ArrayList<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // creating normal list (its size can be changed) by factory method
+    List<String> colors3 = new ArrayList<>(Arrays.asList("Violet", "Purple"));  // creating normal list (its size can be changed) by factory method
 
-    ArrayList<String> colors2 = new ArrayList<>(){{  // declaring and initializing array list and adding elements via instance block
+    List<String> colors2 = new ArrayList<>(){{  // declaring and initializing array list and adding elements via instance block
         add("White");           // adding 1 new element to the end of the list
         add(1, "Gray");    // adding 1 new element to the specified position
         add("Black");
@@ -16,9 +16,9 @@ public class ArrayListSamples {
         addAll(0, colors3);        // adding (copying) all elements from another collection to the end of the list
     }};
 
-    ArrayList<String> colors5 = new ArrayList<>(colors3); // declaring array list and initializing it with elements from another collection
+    List<String> colors5 = new ArrayList<>(colors3); // declaring array list and initializing it with elements from another collection
 
-    ArrayList<Integer> numbers = new ArrayList<>();  // in case primitives, argument may be only wrapped
+    List<Integer> numbers = new ArrayList<>();  // in case primitives, argument may be only wrapped
     public void addNumbers() {
         numbers.add(1);
         numbers.add(2);

@@ -3,6 +3,9 @@
 
 // A Java constructor is special method that is called when an object is instantiated.
 
+// A Java constructor is special method that is called when an object is instantiated. Constructor initializes an object when it is created.
+// The purpose of a Java constructor is to initialize the newly created object before it is used.
+
 public class Constructor {
 
     public Constructor() {}  // Constructor has the same name as class, no return type, no modifiers other than accessibility.

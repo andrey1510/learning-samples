@@ -39,6 +39,12 @@ public class ArrayListSamples {
 
         ArrayList<String> colors4 = new ArrayList<>(1000);  // array list with initial capacity allocated to it when created; default capacity os 10 elements
 
+    /////////////////////////////////////// List from other  sources ////////////////////////////////
+
+        String s6 = "fgfd rgdf dfgd";
+        List<String> arr = Arrays.asList(s6.split(" "));
+
+
     /////////////////////// Removing elements from Array List /////////////////////
 
         colors1.remove("Blue");   // removing element from array list by element (only first element with such value)

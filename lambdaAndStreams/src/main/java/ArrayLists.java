@@ -1,12 +1,19 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArrayLists {
 
     List<Integer> numbers = new ArrayList<> (Arrays.asList(1, 2, 3, 10, 13));
     List<String> colors1 = new ArrayList<> (Arrays.asList("Orange", "Blue", "Green", "Yellow"));
     List<String> colors2 = new ArrayList<> (Arrays.asList("Orange", "White", "Yellow", "Cyan"));
+
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    List<Integer> t = Stream.of(a, b, c).sorted().collect(Collectors.toList());     // init and operations with list
 
     public static void main(String[] args) {
         ArrayLists t = new ArrayLists();

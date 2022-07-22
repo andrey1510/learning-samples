@@ -29,6 +29,10 @@ public class ArrayLists {
 
     }
 
-
+    // List creation with filtration
+    String str = "ab45ad8b4";
+    List<String> list = Arrays.stream(str.split(""))
+            .filter(e -> e.equals("(") || e.equals(")"))
+            .collect(Collectors.toList());
 
 }

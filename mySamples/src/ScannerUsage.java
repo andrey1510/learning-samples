@@ -15,6 +15,9 @@ public class ScannerUsage {
         // Results:
         System.out.println("The following int was entered: " + i);
         System.out.println("The following string was entered: " + s2);
+
+
+        scanner.close();   // закрыть сканер
     }
 
 }

@@ -5,10 +5,10 @@ public interface Interface {  // Interface is abstract by definition, so it cann
     // Interface body can contain member declarations that include any of the following:
 
     // Abstract methods declarations:
-    void calculate();  // methods in interface body are Abstract and Public by default; abstract methods shall not have a body.
+    public abstract void calculate();  // methods in interface body are Abstract and Public by default; abstract methods shall not have a body.
 
     // Static methods declarations:
-    static void multiply(){  // static methods in interface body must have a body
+    static void multiply(){  // static methods in interface body must have a body; появилось в Java8 для использования лямбд (обратной совместимости)
         System.out.println("Sample of static method of interface implementation");
     }
 
@@ -22,7 +22,7 @@ public interface Interface {  // Interface is abstract by definition, so it cann
     }
 
     //Constant declarations:
-    int UNIT_NUMBER = 1; // Constants are defined by field declarations and are public, static, and final by default.
+    public static final int UNIT_NUMBER = 1; // Constants are defined by field declarations and are public, static, and final by default.
                          // Constant must be initialized.
 }
 

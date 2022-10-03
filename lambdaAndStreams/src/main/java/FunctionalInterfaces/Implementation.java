@@ -1,4 +1,6 @@
-public class Sample2 {
+package FunctionalInterfaces;
+
+public class Implementation {
     public static void main(String[] args) {
         FuncInterface reference;
         reference = (i,n) -> i*n+3;
@@ -6,6 +8,3 @@ public class Sample2 {
     }
 }
 
-interface FuncInterface {
-    int doSomething(int i, int n) ;
-}

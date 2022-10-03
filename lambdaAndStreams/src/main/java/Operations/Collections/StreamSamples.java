@@ -1,3 +1,5 @@
+package Operations.Collections;
+
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.*;
@@ -9,23 +11,7 @@ import static java.util.stream.Collectors.toList;
 
 public class StreamSamples {
 
-    List<Integer> numbers1 = new ArrayList<>(Arrays.asList(2, 11, 3, 5, 24, 3, 101, 44, 3, 8, -1, 77, 0, -25));
-    Stream<Integer> streamNumbers1 = numbers1.stream();  // creation of stream from collection
 
-    Stream<String> streamFromValues = Stream.of("a", "b", "c");  // creation of stream from values
-
-    Integer[] arr1 = { 11, 3, 5, 24, 101};
-    Stream<Integer> streamFromArrays = Arrays.stream(arr1);   // creation of stream from array
-
-
-    public static void main(String[] args) {        // creation of stream with builder
-       Stream.builder().add("a1").add("a2").add("a3").build();
-    }
-}
-
-///////////////////////////////////// Operations - filters, sorting, mapping //////////////////////////
-
-class Operations {
     public static void main(String[] args) {
         List<Integer> numbers1 = new ArrayList<>(Arrays.asList(2, 0, 11, 3, 5, 24, 3, 90, 99, 101, 44, 3, 8, -2, 77, 0, -25, 1, 2, 3, 86, 105));
         numbers1.stream()  // numbers1 - источник данных, к которому производится запрос
@@ -82,38 +68,3 @@ class Operations3 {
 
 /////////////////////////////// Operations - Search ///////////////////////////////////////
 
-class Operations4 {
-    static List<Integer> numbers4 = new ArrayList<>(Arrays.asList(3, 0, 2, 105));
-
-    public static void main(String[] args) {
-
-        boolean containsZero = numbers4.stream()
-                .anyMatch(n -> n == 0);     // удовлетворяет ли заданному предикату хотя бы один элемент из потока данных
-
-        boolean allMoreThanZero = numbers4.stream()
-                .allMatch(n -> n > 0);      // проверяет, удовлетворяют ли заданному предикату все элементы потока данных
-
-        boolean noZero = numbers4.stream()
-                .noneMatch(n -> n == 0);   // проверяет, точно ли ни один элемент списка не соответствует заданному предикату
-
-        int smallestNonZero = numbers4.stream()
-                .sorted()
-                .filter(n -> n > 0)
-                .findAny().orElse(0);     // возвращает первый элемент списка, целесообразно использовать с другими операциями
-        // применяется Optional
-
-        Optional<Integer> maxNumber4 = numbers4.stream().reduce(Integer::max);
-
-        //Comparator<Integer> numbers4Comparator = Comparator.comparing(numbers4.get(1));
-
-        //int minElement = numbers4.stream()
-        //      .min().getAsInt();
-
-
-
-        System.out.println("List contains zero: " + containsZero);
-        System.out.println("All elements of the list is more than zero: " + allMoreThanZero);
-        System.out.println("No element of the list is zero: " + noZero);
-        System.out.println("Smallest non-zero number of the list is: " + smallestNonZero);
-    }
-}

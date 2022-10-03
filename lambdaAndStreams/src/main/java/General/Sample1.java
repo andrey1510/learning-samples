@@ -1,3 +1,4 @@
+package General;
 
 public class Sample1 {
     void print() {

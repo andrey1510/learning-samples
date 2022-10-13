@@ -1,5 +1,6 @@
 public class ForLoop {
 
+
     public static void main(String[] args) {
 
         for(;;) {        // for(;;) is an infinite loop

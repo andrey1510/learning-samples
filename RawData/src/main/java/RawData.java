@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Raw1 {
+public class RawData {
 
     List<Integer> numbersList1 = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
     List<Integer> numbersList2 = new ArrayList<>(Arrays.asList(11, 12, 13, 14, 15, 16, 17, 18, 19, 20));
@@ -9,6 +9,7 @@ public class Raw1 {
     List<Character> lettersList = new ArrayList<> (Arrays.asList('a', 'b', 'c', 'd', 'e', 'f'));
 
     Map<String, String> colorsMap = Map.of("G","Green", "Y", "Yellow","R", "Red","O", "Orange");
+    Map<Integer, Integer> numbersMap = Map.of(1,11, 2, 22,3, 33,4, 44);
 
     Map<Integer, String> months = new HashMap<>();
     {
@@ -20,6 +21,13 @@ public class Raw1 {
         months.put(6, "June");
         months.put(7, "July");
         months.put(8, "August");
+    }
+
+    static {
+    ArrayList<int[]> list = new ArrayList<>();
+        list.add(new int[] {10,0});
+        list.add(new int[] {3,5});
+        list.add(new int[] {2,5});
     }
 
     String phrase1 = "The quick brown fox jumps over the lazy dog";

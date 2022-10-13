@@ -1,4 +1,4 @@
-package Optionals;
+package Operations.Collections;
 
 import java.util.*;
 import java.util.stream.Collectors;

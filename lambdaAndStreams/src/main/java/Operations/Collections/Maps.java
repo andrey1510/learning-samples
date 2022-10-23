@@ -22,6 +22,9 @@ public class Maps {
                 .collect(Collectors.toMap(e -> arrList1().indexOf(e), e -> (Integer)e[0]-e[1]));
         int sum = count.values().stream().reduce(0, Integer::sum);
 
+        System.out.println("Map: \n");
+        count.forEach((key, value) -> System.out.println("Key: " + key + "\t Value: " + value));
+
 
     /////////////////// Flat Map ///////////////////
     //

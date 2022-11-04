@@ -37,4 +37,20 @@ public class ArrayLists {
             .filter(e -> e.equals("(") || e.equals(")"))
             .collect(Collectors.toList());
 
+    ///////////////// Conversions ///////////////
+
+    // Array to list:
+
+    int[] numbersArr = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    List <Integer> strings = Arrays.stream(numbersArr)
+            .boxed()
+            .collect(Collectors.toList());
+
+    // Integer list to string list:
+
+    List<Integer> numbersIntegers = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+    List<String> numbersStrings = numbersIntegers.stream()
+            .map(Object::toString)
+            .collect(Collectors.toList());
+
 }

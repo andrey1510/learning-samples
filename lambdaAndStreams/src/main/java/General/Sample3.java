@@ -1,3 +1,5 @@
+package General;
+
 public class Sample3 {
     public static void main(String[] args) {
         Sample3Interface str = String::length;

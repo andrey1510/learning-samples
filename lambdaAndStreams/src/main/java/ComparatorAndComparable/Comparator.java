@@ -1,17 +1,15 @@
+package ComparatorAndComparable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ComparatorAndComparable {
-
-}
-
-class Comparator1 {
+class Comparator {
 
     static List<String> colors = new ArrayList<>(Arrays.asList("45", "11", "2"));
 
     private static String sortColors1() {
-    // todo
+        // todo
         colors.sort((o1, o2) -> {
             int comp = summarize(o1) - summarize(o2);
             if (comp == 0) {

@@ -6,6 +6,7 @@ public class Sequence {
     }
 
     int p2;
+    int p3;
     {
         p2=5;
         System.out.println("Instance initializer block of parent class");
@@ -14,6 +15,18 @@ public class Sequence {
     public Sequence() {
         System.out.println("Default constructor of parent class");
     }
+
+    public Sequence(int p2) {
+        this.p2 = p2;
+        System.out.println("Parametrized constructor of parent class");
+    }
+
+    public Sequence(int p2, int p3) {
+        this.p2 = p2;
+        this.p3 = p3;
+        System.out.println("Overloaded constructor of parent class");
+    }
+
 }
 
 
@@ -38,10 +51,19 @@ class SequenceChild extends Sequence {
     }
 
     int c3;
+    int c4;
     public SequenceChild(int c3) {
         this.c3 = c3;
         System.out.println("Parametrized constructor of child class");
     }
+
+    public SequenceChild(int c3, int p2) {
+        super(p2);
+        this.c3 = c3;
+        System.out.println("Chained constructor of child class");
+    }
+
+
 }
 
 class SequenceChildOfChild extends SequenceChild {
@@ -79,8 +101,16 @@ class SequenceChildOfChild extends SequenceChild {
 
 class SequenceTest {
     public static void main(String[] args) {
-    //SequenceChild t1 = new SequenceChild(1);
-    //SequenceChildOfChild t2 = new SequenceChildOfChild(1);
+
+//        Sequence t0 = new Sequence();
+//        Sequence t01 = new Sequence(1);
+//        Sequence t02 = new Sequence(1, 1);
+
+      //  SequenceChild t1 = new SequenceChild();
+      //  SequenceChild t2 = new SequenceChild(1);
+      //  SequenceChild t3 = new SequenceChild(1, 1);
+
+        SequenceChildOfChild t2 = new SequenceChildOfChild(1);
         SequenceChildOfChild t3 = new SequenceChildOfChild(1,2);
 
     }

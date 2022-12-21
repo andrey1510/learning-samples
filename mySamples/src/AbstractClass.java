@@ -40,7 +40,7 @@ class SubclassOfAbstractClass extends AbstractClass {  // Subclass of abstract c
 
     public static void main(String[] args) {
         SubclassOfAbstractClass t = new SubclassOfAbstractClass();
-        t.doSomething(); // invoking overriden abstract method
+        t.doSomething(); // invoking overridden abstract method
         t.print2();    // invoking non-abstract final method of abstract superclass
         t.calculate(); // invoking non-abstract method of abstract superclass
 

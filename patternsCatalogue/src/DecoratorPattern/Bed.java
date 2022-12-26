@@ -5,8 +5,8 @@ package DecoratorPattern;
 
 interface Bed {
 
-    public String getTitle();
-    public int getPrice();
+    String getTitle();
+    int getPrice();
 
 }
 

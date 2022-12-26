@@ -7,6 +7,10 @@ public class Sequence {
 
     int p2;
     int p3;
+
+    String s = "sssssssssssssssssss";
+
+
     {
         p2=5;
         System.out.println("Instance initializer block of parent class");
@@ -62,6 +66,13 @@ class SequenceChild extends Sequence {
         this.c3 = c3;
         System.out.println("Chained constructor of child class");
     }
+
+
+    public SequenceChild (String s) {
+
+
+    }
+
 
 
 }

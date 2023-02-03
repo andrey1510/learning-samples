@@ -1,6 +1,5 @@
 public class ForLoop {
 
-
     public static void main(String[] args) {
 
         for(;;) {        // for(;;) is an infinite loop
@@ -14,9 +13,7 @@ public class ForLoop {
         for (int element : arr) {   // foreach (int element is a local variable (element declaration) and arr is a reference to array)
         }
 
-
     }
-
 
 //ToDo add label, break, continue,
 

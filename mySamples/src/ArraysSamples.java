@@ -74,5 +74,14 @@ class Array5 {
             System.out.println(i);
         }
 
+
+        String s1 = "ssddsdfd";
+        s1 = "asaaaaaadsd";
+        System.out.println(s1);
+
+
+
+
+
     }
 }

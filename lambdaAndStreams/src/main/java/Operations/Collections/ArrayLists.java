@@ -53,4 +53,14 @@ public class ArrayLists {
             .map(Object::toString)
             .collect(Collectors.toList());
 
+    // String to ASCII number values list
+
+    String s = "abc";
+    List<Integer> letters = s.chars().boxed().collect(Collectors.toList());
+
+    // String to Character list
+
+    List<Character> ch = s.chars()
+        .mapToObj(e->(char)e).collect(Collectors.toList());
+
 }

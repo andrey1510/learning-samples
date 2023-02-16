@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class ArraysSamples {
 
@@ -80,8 +81,19 @@ class Array5 {
         System.out.println(s1);
 
 
-
-
-
     }
 }
+
+////////////////////// Array to String ///////////////
+
+class ArrayToString {
+
+    String[] arr = new String[] {"a", "b", "c"};
+
+    String s1 = String.join("", arr);
+
+    String s2 = Arrays.stream(arr)
+            .collect(Collectors.joining());
+
+}
+

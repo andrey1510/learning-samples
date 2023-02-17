@@ -25,6 +25,10 @@ public class Maps {
         System.out.println("Map: \n");
         count.forEach((key, value) -> System.out.println("Key: " + key + "\t Value: " + value));
 
+        ///////////////
+        List<Integer> numbersList0 = new ArrayList<>(Arrays.asList(6, 7, 8, 9, 10));
+        Map<Integer, Integer> map2 = numbersList0.stream().collect(Collectors.toMap(numbersList0::indexOf, e -> e));
+
 
     /////////////////// Flat Map ///////////////////
     //

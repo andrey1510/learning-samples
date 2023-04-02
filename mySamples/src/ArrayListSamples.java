@@ -109,6 +109,8 @@ class ArrayListIterators {
         // Iterator sample (forEach, stream)):
         numbers.stream().forEach((n) -> System.out.println(n));
 
+
+
     }
 
 

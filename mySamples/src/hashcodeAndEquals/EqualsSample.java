@@ -1,4 +1,4 @@
-package HashcodeAndEquals;
+package hashcodeAndEquals;
 
 public class EqualsSample {
 

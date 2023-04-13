@@ -1,4 +1,4 @@
-package HashcodeAndEquals;
+package hashcodeAndEquals;
 
 // from https://stackoverflow.com/questions/2265503/why-do-i-need-to-override-the-equals-and-hashcode-methods-in-java
 

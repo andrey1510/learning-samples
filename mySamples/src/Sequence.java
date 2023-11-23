@@ -1,4 +1,5 @@
 public class Sequence {
+
     static int p1;
     static {
         p1=2;
